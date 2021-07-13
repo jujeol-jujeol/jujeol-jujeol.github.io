@@ -5,7 +5,7 @@ slug: jujeo-jujeol
 menu: true
 order: 1
 description: >
-  주절주절이 관련된 태그입니다.
+  주절주절 카테고리
 accent_color: '#268bd2'
 accent_image:
   background: '#202020'
