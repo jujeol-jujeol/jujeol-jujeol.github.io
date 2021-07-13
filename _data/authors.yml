@@ -61,18 +61,14 @@ author1:
     # download:        https://github.com/qwtel/hydejack-starter-kit/archive/v7.5.0.zip
 
 # Another author (optional)
-author2:
-  name: <firtname> <lastname>
-  email: <mail@domain.tld>
+sunny:
+  name: 서니
+  email: <sunhpark42@gmail.com>
   about: |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-    Open `_data/authors.yml` to edit this text.
+    술을 사랑하는 서니입니다.
   picture: https://placehold.it/128x128
-  twitter: <username>
-  github: <username>
+  # twitter: <username>
+  github: <sunhpark42>
   accent_color: '#268bd2'
   accent_image:
     background: '#202020'
