@@ -1,7 +1,7 @@
 ---
 layout: list
 title: 주절주절
-slug: 주절주절
+slug: jujeo-jujeol
 menu: true
 order: 1
 description: >
