@@ -38,4 +38,12 @@ sunny: // 작성자 키
     background: '#202020'
     overlay: false
 ```
+
+#### 예시 화면
 <img width="881" alt="스크린샷 2021-07-13 오후 5 20 00" src="https://user-images.githubusercontent.com/67677561/125417329-0e6d7e22-e90f-48cb-89d6-74ee5c5bd8c0.png">
+
+### 브랜치 파서 글 작성후 PR 날리기
+* 리뷰를 원하면 리뷰어 지정 후 리뷰요청하기
+* 없으면 맞춤법 검사기 한 번 씩은 돌리고 업로드 하기
+
+### 카테고리 추가 필요한 경우 이슈등록
