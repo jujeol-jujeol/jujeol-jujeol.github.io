@@ -1,9 +1,7 @@
 ---
 layout: post
-title: <임시 글> localhost 모바일로 보기
-description: >
-  테마 적용 확인을 위한 임시 글입니다.
-tags: [jujeo-jujeol]
+title: localhost환경 모바일로 디버깅 하기
+tags: [jojal-jojal]
 author: sunny
 ---
 
@@ -19,7 +17,7 @@ author: sunny
 
 - Chrome의 경우 핸드폰, PC에 모두 Chrome이 설치되어 있어야 한다.
 - USB를 통한 연결이 되어있어야 한다.
-- webpack, http-server 등을 이용해 정적 파일을 localhost:3000, [localhost:8080](http://localhost:8080) 등과 같이 localhost가 켜져있어야 한다.
+- webpack, http-server 등을 이용해 정적 파일을 localhost:3000, localhost:8080 등과 같이 localhost가 켜져있어야 한다.
 
 ### GALAXY 환경 설정
 
@@ -37,12 +35,12 @@ author: sunny
 
 1. `chrome://inspect/#devices` 에 접속한다.
 
-   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70690af2-6f27-49be-ae85-c8ad5baa1b37/_2021-07-09__2.19.18.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70690af2-6f27-49be-ae85-c8ad5baa1b37/_2021-07-09__2.19.18.png)
+   ![https://jujeol-jujeol.github.io/assets/img/2021-07-12-localhost환경-모바일로-디버깅-하기/1.png](https://jujeol-jujeol.github.io/assets/img/2021-07-12-localhost환경-모바일로-디버깅-하기/1.png)
 
 2. Discover USB devices 를 체크한다.
 3. 'Port forwarding' 버튼을 클릭
 
-   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c1806d0c-bd5c-4800-bac1-ee2892f7d70b/_2021-07-09__2.17.48.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c1806d0c-bd5c-4800-bac1-ee2892f7d70b/_2021-07-09__2.17.48.png)
+   ![https://jujeol-jujeol.github.io/assets/img/2021-07-12-localhost환경-모바일로-디버깅-하기/2.png](https://jujeol-jujeol.github.io/assets/img/2021-07-12-localhost환경-모바일로-디버깅-하기/2.png)
 
 4. 공유하려는 Port 번호를 입력한다.
 5. 하단의 Enable port forwarding을 체크한다.
@@ -58,4 +56,4 @@ author: sunny
 2. 설정 창 가장 우측의 고급 탭 > 하단에 '메뉴막대에서 개발자용 메뉴 보기' 체크
 3. 상단 탭 '개발자용'을 열면 현재 연결 된 Device 정보를 확인 할 수 있다.
 
-   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b0717d8b-7bfc-4ff3-a2f9-d542049abb79/_2021-07-09__2.24.35.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b0717d8b-7bfc-4ff3-a2f9-d542049abb79/_2021-07-09__2.24.35.png)
+   ![https://jujeol-jujeol.github.io/assets/img/2021-07-12-localhost환경-모바일로-디버깅-하기/3.png](https://jujeol-jujeol.github.io/assets/img/2021-07-12-localhost환경-모바일로-디버깅-하기/3.png)
