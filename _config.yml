@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-url:                   https://domain.tld
+url: https://jujeol-jujeol.github.io/
 
 # IMPORTANT: Set The "base URL" of your site.
 #
@@ -15,43 +15,40 @@ url:                   https://domain.tld
 # When using GitHub Pages, set to '' when hosting a user- or organization page,
 # i.e. when the name of the repository looks like <username>.github.io.
 # Otherwise, set to /<name of repository> (with leading /, but without the < >).
-baseurl:               ''
+baseurl: ''
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
-lang:                  en
+lang: ko
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Hydejack
+title: Jojal-Jojal
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
-description:           >
-  A Jekyll theme with JavaScript powers. "Best Theme by a Mile".
-  Combines the best of static sites and modern web apps.
-  Open `_config.yml` to edit this text.
+description: >
+  술 알고 마시자! 술 추천 및 리뷰 서비스 주절주절 팀블로그 입니다.
 
 # A shorter description for the sidebar.
-tagline:               >
-  A Jekyll theme with JavaScript powers.
-  Open `_config.yml` to edit this text.
+tagline: >
+  술 알고 마시자! 술 추천 및 리뷰 서비스 주절주절 팀블로그 입니다.
 
 # A list of keywords for your blog
-keywords:              []
+keywords: []
 
 # Used by jekyll-seo-tag...
-logo:                  /assets/icons/icon.png
+logo: /assets/icons/icon.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 # Duplication is necessary due to the `jekyll-feed`, `jekyll-seo-tag` plugin.
 author:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name: <firstname> <lastname>
+  email: <mail@domain.tld>
   # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2017. All rights reserved.
+copyright: © 2017. All rights reserved.
 
 # Add links to the footer.
 # Typically you'll want to link to your impress, cookies or privacy policy, etc.
@@ -62,29 +59,28 @@ copyright:             © 2017. All rights reserved.
 #     href:              /cookies-policy/
 
 # Format of the permalinks
-permalink:             pretty
+permalink: pretty
 
 # Pagination configuration (used by the `blog` layout)
-paginate:              5
-paginate_path:         /page-:num/
-
+paginate: 5
+paginate_path: /page-:num/
 
 # Customizaton
 # ========================================================================================
 
 # Sidebar image and theme color of the site.
-accent_image:          /assets/img/sidebar-bg.jpg
-accent_color:          '#4fb1ba'
+accent_image: /assets/img/sidebar-bg.jpg
+accent_color: '#4fb1ba'
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://qwtel.com/hydejack/docs/configuration/>
-google_fonts:          Roboto+Slab:700|Noto+Sans:400,400i,700,700i
+google_fonts: Roboto+Slab:700|Noto+Sans:400,400i,700,700i
 
 # The text font. Expects a string that is a valid CSS font-family value.
-font:                  Noto Sans, Helvetica, Arial, sans-serif
+font: Noto Sans, Helvetica, Arial, sans-serif
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
-font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
+font_heading: Roboto Slab, Helvetica, Arial, sans-serif
 
 # 3rd Party Integrations
 # ----------------------------------------------------------------------------------------
@@ -106,63 +102,61 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
 hydejack:
   # Configure the order of complementary content on blog posts
-  post_addons:         [about, newsletter, related]
+  post_addons: [about, newsletter, related]
 
   # Configure the order of complementary content on project pages
-  project_addons:      [about, newsletter, other]
+  project_addons: [about, newsletter, other]
 
   # If you do not use Google Fonts, set to `true`.
-  no_google_fonts:     false
+  no_google_fonts: false
 
   # Set to `true` if you don't want to show an icon indicating external links
-  no_mark_external:    false
+  no_mark_external: false
 
   # Set to `true` if third party plugins fail to work with dynamically loaded pages
-  no_push_state:       false
+  no_push_state: false
 
   # Set to `true` if you want to disable the drawer
-  no_drawer:           false
+  no_drawer: false
 
   # Set to `true` if you do not want parts of the css inlined in <head/>
   # This *may* be benefitial when serving the site over HTTP/2.
-  no_inline_css:       false
+  no_inline_css: false
 
   # Code blocks and tables "break" the layout by spanning the full available width.
   # Set this to true if you want them to be the same width as other content.
-  no_break_layout:     false
+  no_break_layout: false
 
   # Set to `true` if you do not want to expose your resume and projects
   # in machine-readable formats.
-  no_structured_data:  false
+  no_structured_data: false
 
   # You can set this to `true` if you don't want to set the `theme-color` meta tag,
   # This only affects the meta tag, not the color specified in the app manifest.
-  no_theme_color:      false
+  no_theme_color: false
 
   # Set to `true` when building with the `--lsi` option
-  use_lsi:             false
+  use_lsi: false
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
   # When enabled, no user-related data will be stored until the user gives consent.
-  cookies_banner:      false
-
+  cookies_banner: false
 
 # Collections
 # ========================================================================================
 
 collections:
   featured_categories:
-    permalink:         /category/:name/
-    output:            true
+    permalink: /category/:name/
+    output: true
 
   featured_tags:
-    permalink:         /tag/:name/
-    output:            true
+    permalink: /tag/:name/
+    output: true
 
   projects:
-    permalink:         /projects/:path/
-    output:            true
-
+    permalink: /projects/:path/
+    output: true
 
 # File inclusion/exclusion
 # ========================================================================================
@@ -176,7 +170,6 @@ exclude:
   - package-lock.json
 include:
   - LICENSE.md
-
 
 # Plugins and Plugin Configuration
 # ========================================================================================
@@ -231,40 +224,38 @@ plugins:
 #     - https://twitter.com/<username>
 #     - https://github.com/<username>
 
-
 # Other Plugins
 # ---------------------------------------------------------------------------------------
 
 optional_front_matter:
-  remove_originals:    true
+  remove_originals: true
 
 readme_index:
-  remove_originals:    true
+  remove_originals: true
 
 relative_links:
-  collections:         true
+  collections: true
 
 titles_from_headings:
-  strip_title:         true
-  collections:         true
+  strip_title: true
+  collections: true
 
 kramdown:
-  footnote_backlink:   '&#x21a9;&#xfe0e;'
-  math_engine:         mathjax
+  footnote_backlink: '&#x21a9;&#xfe0e;'
+  math_engine: mathjax
   math_engine_opts:
-    preview:           true
-    preview_as_code:   true
+    preview: true
+    preview_as_code: true
 
 compress_html:
-  comments:            ["<!-- ", " -->"]
-  clippings:           all
-  endings:             all
+  comments: ['<!-- ', ' -->']
+  clippings: all
+  endings: all
   ignore:
-    envs:              [development]
+    envs: [development]
 
 sass:
-  style:               compressed
-
+  style: compressed
 # If you are upgrading form v5 (or earlier), uncomment the lines below,
 # so that the location of the feed XML stays the same.
 # feed:
