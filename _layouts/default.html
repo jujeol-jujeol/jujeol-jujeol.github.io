@@ -1,5 +1,6 @@
 ---
-# Copyright (c) 2017 Florian Klampfer <https://qwtel.com/>
+# Copyright (c) 2017 Florian Klampfer
+<https: //qwtel.com />
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -32,30 +33,14 @@ layout: base
 
   {{ content }}
 
-  <hr class="dingbat"/>
+  <hr class="dingbat" />
 
   {% if site.posts.size > 0 %}
-    <h2 class="hr">{{ strings.posts | default:"Posts" }}</h2>
-    <ul class="related-posts">
-      {% for post in site.posts limit:5 %}
-        {% include post-list-item.html post=post %}
-      {% endfor %}
-    </ul>
-  {% endif %}
-
-  {% assign pages = site.html_pages | where:"layout","page" | where_exp:"page","page.sitemap != false" %}
-  {% if pages.size > 0 %}
-    <h2 class="hr">{{ strings.pages | default:"Pages" }}</h2>
-    <ul class="related-posts">
-      {% for page in pages limit:5 %}
-        {% if page.layout == 'page' %}
-          <li class="h4">
-            <a href="{{ page.url | relative_url }}" class="flip-title">
-              <span>{{ page.title }}</span>
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+  <h2 class="hr">{{ strings.posts | default:"Posts" }}</h2>
+  <ul class="related-posts">
+    {% for post in site.posts limit:5 %}
+    {% include post-list-item.html post=post %}
+    {% endfor %}
+  </ul>
   {% endif %}
 </article>
