@@ -152,7 +152,7 @@ submodule을 적용하면 하나의 디렉토리가 해당 서브모듈 reposito
    }
    ```
 # 결론
-- jujeol팀이 credential 파일을 private repository에서 관리하기 위해 도입한 submodule 도입기 재밌게 보셨나요? ^^
+- jujeol팀이 credential 파일을 private repository에서 관리하기 위해 도입한 submodule 도입기였습니당~~
 - credential 파일은 내부 레포지토리라 볼 수 없지만 gradle 설정 등은 [프로젝트 레포지토리](https://github.com/woowacourse-teams/2021-jujeol-jujeol)에서 확인하실 수 있습니다.
 
 # 참고
