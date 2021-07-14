@@ -3,7 +3,7 @@
 # Change `author1` to your shortname.
 author1:
   name: 주절주절
-  email: <sunhpark42@gmail.com>
+  email: sunhpark42@gmail.com
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
@@ -63,12 +63,12 @@ author1:
 # Another author (optional)
 sunny:
   name: 서니
-  email: <sunhpark42@gmail.com>
+  email: sunhpark42@gmail.com
   about: |
     술을 사랑하는 서니입니다.
-  picture: https://placehold.it/128x128
+  picture: https://avatars.githubusercontent.com/u/67677561?v=4
   # twitter: <username>
-  github: <sunhpark42>
+  github: sunhpark42
   accent_color: '#268bd2'
   accent_image:
     background: '#202020'

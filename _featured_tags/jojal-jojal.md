@@ -1,11 +1,11 @@
 ---
 layout: list
-title: 주절주절
-slug: jujeo-jujeol
+title: 조잘조잘
+slug: jojal-jojal
 menu: true
 order: 1
 description: >
-  주절주절 카테고리
+  조잘조잘, 주절주절 팀의 개발이야기
 accent_color: '#268bd2'
 accent_image:
   background: '#202020'
