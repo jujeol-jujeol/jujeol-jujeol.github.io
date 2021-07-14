@@ -3,7 +3,7 @@ layout: post
 title: [git] git submodule 적용하기
 description: >
   jujeol 프로젝트 git submodule 적용기
-tags: [git]
+tags: [jojal-jojal]
 author: wedge
 ---
 
@@ -56,7 +56,7 @@ submodule을 적용하면 하나의 디렉토리가 해당 서브모듈 reposito
    ```shell
    root
    ├── backend
-   ├── fronend
+   ├── frontend
    └── auth # 새롭게 추가한 submodule
    ```
 4. 서브 모듈을 추가한 내용을 커밋해야 합니다. 다음 명령어로 커밋해 줍시다
