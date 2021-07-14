@@ -1,5 +1,5 @@
 # 조잘조잘, 주절주절 팀블로그
-### 블로그 링크 : [jujeol-jujeol.github.io](jujeol-jujeol.github.io)
+### 블로그 링크 : [jujeol-jujeol.github.io](https://jujeol-jujeol.github.io/)
 
 #### theme: Hydejack
 
