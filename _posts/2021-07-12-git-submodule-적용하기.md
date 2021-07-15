@@ -17,9 +17,9 @@ author: wedge
 # jujeol팀 에서는?
 
 소셜 로그인에 필요한 key나, AWS를 활용하면서 필요한 key 처럼 공개 레포지토리에 올려두면 안 되는 credential 관련 내용들을 private repository에서 관리하기 위해
-활용하였습니다~~! 
+활용하였습니다! 
 
-submodule을 적용하면 하나의 디렉토리가 해당 서브모듈 repository로 변경됩니다~~
+submodule을 적용하면 하나의 디렉토리가 해당 서브모듈 repository로 변경됩니다.
 
 ## 적용기
 ### 레포지토리 만들기
@@ -152,7 +152,7 @@ submodule을 적용하면 하나의 디렉토리가 해당 서브모듈 reposito
    }
    ```
 # 결론
-- jujeol팀이 credential 파일을 private repository에서 관리하기 위해 도입한 submodule 도입기였습니당~~
+- jujeol팀이 credential 파일을 private repository에서 관리하기 위해 도입한 submodule 도입기였습니당~!
 - credential 파일은 내부 레포지토리라 볼 수 없지만 gradle 설정 등은 [프로젝트 레포지토리](https://github.com/woowacourse-teams/2021-jujeol-jujeol)에서 확인하실 수 있습니다.
 
 # 참고
