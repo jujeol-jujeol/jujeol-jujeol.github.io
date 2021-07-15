@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [git] git submodule 적용하기
+title: '[git] git submodule 적용하기'
 description: >
   jujeol 프로젝트 git submodule 적용기
 tags: [jojal-jojal]
