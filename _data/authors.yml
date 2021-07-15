@@ -85,3 +85,15 @@ wedge:
   accent_image:
     background: '#DDD8FF'
     overlay: false
+
+tyche:
+  name: 티케
+  email: kgshdgeh@gmail.com
+  about: |
+    어쨋든 오늘을 살아가는 티케입니다.
+  picture:
+  github: devhyun637
+  accent_color: '#7f052a'
+  accent_image:
+    background: '#feebf1'
+    overlay: false
