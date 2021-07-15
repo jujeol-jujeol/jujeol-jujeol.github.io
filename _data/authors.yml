@@ -73,3 +73,15 @@ sunny:
   accent_image:
     background: '#202020'
     overlay: false
+
+wedge:
+  name: 웨지
+  email: fjzjqhdl@gmail.com
+  about: |
+    힘세고 강한 아침
+  picture: https://placehold.it/128x128
+  github: sihyung92
+  accent_color: '#0000ff'
+  accent_image:
+    background: '#DDD8FF'
+    overlay: false
