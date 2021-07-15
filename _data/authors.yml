@@ -79,7 +79,7 @@ wedge:
   email: fjzjqhdl@gmail.com
   about: |
     힘세고 강한 아침
-  picture: https://placehold.it/128x128
+  picture: /assets/img/profile/wedge-mogwa128x128.png
   github: sihyung92
   accent_color: '#0000ff'
   accent_image:
