@@ -47,13 +47,13 @@ author: wedge
 
 ### Chrome 설정
 
-<img width="885" alt="크롬 인스펙터 메인 화면" src="/assets/img/2021-07-16-localhost/chrome-inspect-main.png">
+<img width="720" alt="크롬 인스펙터 메인 화면" src="/assets/img/2021-07-16-localhost/chrome-inspect-main.png">
 
 1. `chrome://inspect/#devices` 에 접속
 2. **'Discover USB devices'** 를 체크
 3. **'Port forwarding'** 버튼을 클릭
 
-<img width="340" alt="크롬 인스펙터 포트 포워딩 창" src="/assets/img/2021-07-16-localhost/chrome-inspect-main.png">
+<img width="340" alt="크롬 인스펙터 포트 포워딩 창" src="/assets/img/2021-07-16-localhost/chrome-inspect-port-forwarding.png">
 
 4. 공유하려는 Port 번호를 입력
 5. 하단의 **'Enable port forwarding'**을 체크
@@ -61,7 +61,7 @@ author: wedge
 7. **\<Remote Target>** 에 Chrome 에서 실행되고 있는 프로세스를 확인할 수 있다.
 
 <div style="display: flex">
-<img width="240" alt="모바일 크롬에 공유중인 주절주절 로그인 화면" src="/assets/img/2021-07-16-localhost/chrome-mobile-capture.jpeg">
+<img width="180" alt="모바일 크롬에 공유중인 주절주절 로그인 화면" src="/assets/img/2021-07-16-localhost/chrome-mobile-capture.jpeg">
 <img width="640" alt="모바일 크롬에 공유중인 주절주절 로그인 화면이 띄워진 크롬 인스펙터 데브툴 화면" src="/assets/img/2021-07-16-localhost/chrome-inspect-devtool.png">
 </div>
 
@@ -71,14 +71,14 @@ author: wedge
 
 ### iOS, iPadOs 환경 설정
 
-<img width="885" alt="아이패드 웹 속성 옵션 화면" src="/assets/img/2021-07-16-localhost/ipad-web-setting.jpeg">
+<img width="720" alt="아이패드 웹 속성 옵션 화면" src="/assets/img/2021-07-16-localhost/ipad-web-setting.jpeg">
 
 1. '⚙️ 설정' > '사파리' > '고급' 접속
 2. '웹 속성' 옵션 켜기
 
 ### 사파리 설정
 
-<img width="885" alt="사파리 개발자 탭 화면" src="/assets/img/2021-07-16-localhost/safari-dev-tab.png">
+<img width="340" alt="사파리 개발자 탭 화면" src="/assets/img/2021-07-16-localhost/safari-dev-tab.png">
 
 1. 상단 탭의 **'Safari'** > **'환경설정(Preference)'**을 이용해 설정 창 켜기
 2. 설정 창 가장 우측의 **'고급 탭'** > 하단에 **'메뉴막대에서 개발자용 메뉴 보기'** 체크
