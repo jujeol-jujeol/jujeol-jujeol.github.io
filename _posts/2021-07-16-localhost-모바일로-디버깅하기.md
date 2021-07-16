@@ -20,7 +20,7 @@ author: sunny
 #### 개발환경
 
 - 브라우저 : Chrome, MobileChorome, Samsung Browser, Safari, Mobil Safari
-- 기기 : Macbook pro 13인치 2020년 형, iPad Pro 5세대 2021년 형, Galaxy Note 9, iPhone
+- 기기 : Macbook pro 13인치 2020년 형, iPad Pro 5세대 2021년 형, Galaxy Note 9, iPhone SE2
 
 #### 사전 설정
 
