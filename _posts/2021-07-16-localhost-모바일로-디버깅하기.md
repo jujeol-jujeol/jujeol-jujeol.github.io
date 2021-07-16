@@ -65,7 +65,7 @@ author: wedge
     display: flex;
     align-items: center;
 ">
-<img width="180" alt="모바일 크롬에 공유중인 주절주절 로그인 화면" src="/assets/img/2021-07-16-localhost/chrome-mobile-capture.jpeg">
+<img width="200" alt="모바일 크롬에 공유중인 주절주절 로그인 화면" src="/assets/img/2021-07-16-localhost/chrome-mobile-capture.jpeg">
 <img width="640" alt="모바일 크롬에 공유중인 주절주절 로그인 화면이 띄워진 크롬 인스펙터 데브툴 화면" src="/assets/img/2021-07-16-localhost/chrome-inspect-devtool.png">
 </div>
 
