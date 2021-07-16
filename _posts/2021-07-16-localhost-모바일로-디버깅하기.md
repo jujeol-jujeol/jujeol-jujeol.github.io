@@ -2,7 +2,7 @@
 layout: post
 title: '[FE] localhost-모바일로-디버깅하기'
 tags: [jojal-jojal]
-author: wedge
+author: sunny
 ---
 
 > 💡 localhost 를 확인하는 것 뿐만 아니라 모바일 브라우저 위에서의 다른 페이지들의 동작을 확인할 수 있다.
@@ -45,8 +45,14 @@ author: wedge
 
 ### Chrome 설정
 
-<img width="720" alt="크롬 인스펙터 메인 화면" src="/assets/img/2021-07-16-localhost/chrome-inspect-main.png"> 
-<img width="340" alt="크롬 인스펙터 포트 포워딩 창" src="/assets/img/2021-07-16-localhost/chrome-inspect-port-forwarding.png">
+<div style="
+    justify-content: center;
+    display: flex;
+    align-items: center;
+">
+<img width="640" alt="크롬 인스펙터 메인 화면" src="/assets/img/2021-07-16-localhost/chrome-inspect-main.png"> 
+<img width="320" alt="크롬 인스펙터 포트 포워딩 창" src="/assets/img/2021-07-16-localhost/chrome-inspect-port-forwarding.png">
+</div>
 
 1. `chrome://inspect/#devices` 에 접속
 2. 'Discover USB devices' 를 체크
