@@ -85,3 +85,15 @@ wedge:
   accent_image:
     background: '#DDD8FF'
     overlay: false
+
+nabom:
+  name: 나봄
+  email: bomdani9302@gmail.com
+  about: |
+    yo! wassup! 나~봄입니다!
+  picture: /assets/img/profile/nabom_dead.jpeg
+  github: qhals321
+  accent_color: '#0000ff'
+  accent_image:
+    background: '#DDD8FF'
+    overlay: false
