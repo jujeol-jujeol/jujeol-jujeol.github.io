@@ -33,7 +33,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
 위 코드처럼 스프링에는 인터셉터에 원하는 요청 api에만 작동할 수 있는 기능을 제공해요.
 
-하.지.만, `GET`, `POST`, `PUT`, `DELETE` 등과 같은 메서드를 구분하는 기능은 제공하지 않기 때문에 인터셉터 안에 다음과 같이 코드가 추가되요!
+하.지.만, `GET`, `POST`, `PUT`, `DELETE` 등과 같은 메서드를 구분하는 기능은 제공하지 않기 때문에 인터셉터 안에 다음과 같이 코드가 추가돼요!
 
 ```java
 public class LoginInterceptor implements HandlerInterceptor {
@@ -57,13 +57,13 @@ public class LoginInterceptor implements HandlerInterceptor {
 }
 ```
 
-여기서 또 애매한 건 각 api 요청마다 적용되는 메서드가 달라요. 예를들어 `/members/me` 같은 경우는 모든 메서드에 `LoginInterceptor` 가 적용이 되야하는 반면 `/drinks` 는 `GET` 요청을 제외한 메서드에 `LoginInterceptor` 가 적용이 돼야했죠!
+여기서 또 애매한 건 각 api 요청마다 적용되는 메서드가 달라요. 예를 들어 `/members/me` 같은 경우는 모든 메서드에 `LoginInterceptor` 가 적용이 되어야하는 반면 `/drinks` 는 `GET` 요청을 제외한 메서드에 `LoginInterceptor` 가 적용이 되어야 했죠!
 
 이러한 상황을 프록시 패턴을 이용해 해결할 것이에요. 구조를 간단하게 그림으로 표현하면 다음과 같아요!
 
 <img src="https://jujeol-jujeol.github.io/assets/img/interceptor/loginInterceptor.png" height="90%" width="70%">
 
-그림을 보면 로그인 인터셉터를 `PathMatcher Interceptor`가 감싸고 있어요. `PathMatcher Interceptor`는 로그인 인터셉터에 가는 요청의 흐름을 제어하게 되죠. 즉, `PathMatcher` 인터셉터가 로그인 인터셉터가 어떤 api + http method 에 적용이 될 지 정해주는 프록시가 되는 것이에요!
+그림을 보면 로그인 인터셉터를 `PathMatcher Interceptor`가 감싸고 있어요. `PathMatcher Interceptor`는 로그인 인터셉터에 가는 요청의 흐름을 제어하게 되죠. 즉, `PathMatcher` 인터셉터가 로그인 인터셉터가 어떤 api + http method 에 적용이 될지 정해주는 프록시가 되는 것이에요!
 
 그럼 천천히 `PathMatcher Interceptor` 를 만들어볼게요!
 
@@ -75,7 +75,7 @@ public class PathMatcherInterceptor implements HandlerInterceptor {
 }
 ```
 
-이 `PathMatcher Interceptor` 는 로그인 인터셉터 뿐만이 아니라 어떠한 인터셉터이든 요청의 흐름을 제어가 가능한 인터셉터로 만들 것이기 때문에 인터셉터 자체를 필드로 받게 만들었어요!
+이 `PathMatcher Interceptor` 는 로그인 인터셉터뿐만이 아니라 어떠한 인터셉터이든 요청의 흐름을 제어가 가능한 인터셉터로 만들 것이기 때문에 인터셉터 자체를 필드로 받게 만들었어요!
 
 ```java
 public class PathMatcherInterceptor implements HandlerInterceptor {
@@ -89,7 +89,7 @@ public class PathMatcherInterceptor implements HandlerInterceptor {
 }
 ```
 
-다음은 `url pattern`과 `HttpMethod` 를 소지하고 `target path` 가 포함된 `path` 인지 확인 책임을 갖고 있는 `PathContainer` 라는 객체를 만들게요! `PathMatcher` 는 스프링에서 제공하는 `AntPathMatcher` 를 사용했어요.
+다음은 `url pattern`과 `HttpMethod` 를 소지하고 `target path` 가 포함된 `path` 인지 확인 책임을 가진 `PathContainer` 라는 객체를 만들게요! `PathMatcher` 는 스프링에서 제공하는 `AntPathMatcher` 를 사용했어요.
 
 ```java
 public class PathContainer {
@@ -189,7 +189,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 								// PathMatcherInterceptor 에 로그인 인터셉터를 주입한다.
                 new PathMatcherInterceptor(new LoginInterceptor(jwtTokenProvider));
         
-				// PathMatcherInterceptor를 로그인 인터셉터인 것 마냥 인터셉터로 등록한다.
+				// PathMatcherInterceptor를 로그인 인터셉터인 것처럼 인터셉터로 등록한다.
 				return interceptor
                 .excludePathPattern("/**", PathMethod.OPTIONS)
                 .includePathPattern("/members/me/**", PathMethod.ANY)
@@ -205,4 +205,4 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
 이렇게 스프링 인터셉터에 Path와 Method를 검증할 수 있는 기능을 구현해봤어요! 프록시 패턴은 정말 많은 곳에서 사용이 가능한 유용한 패턴이에요! 객체의 정보를 늦게 가져올 수 있는 `Lazy Loading` 을 적용할 수도 있고 위처럼 실제 객체 사용에 접근에 대한 흐름제어도 가능하죠! (이것 말고도 다른 많은 활용법이 있어요!)
 
-실제 객체 대신 무언가 일처리가 필요하다면 프록시 패턴을 이용해보면 어떨까요~? =]
+실제 객체 대신 무언가 일 처리가 필요하다면 프록시 패턴을 이용해보면 어떨까요~? =]
