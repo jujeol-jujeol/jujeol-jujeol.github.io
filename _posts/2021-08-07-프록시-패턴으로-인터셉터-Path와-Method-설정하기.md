@@ -59,7 +59,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
 여기서 또 애매한 건 각 api 요청마다 적용되는 메서드가 달라요. 예를 들어 `/members/me` 같은 경우는 모든 메서드에 `LoginInterceptor` 가 적용이 되어야하는 반면 `/drinks` 는 `GET` 요청을 제외한 메서드에 `LoginInterceptor` 가 적용이 되어야 했죠!
 
-이러한 상황을 프록시 패턴을 이용해 해결할 것이에요. 구조를 간단하게 그림으로 표현하면 다음과 같아요!
+이러한 상황을 프록시 패턴을 이용해 해결할 거에요. 구조를 간단하게 그림으로 표현하면 다음과 같아요!
 
 <img src="https://jujeol-jujeol.github.io/assets/img/interceptor/loginInterceptor.png" height="90%" width="70%">
 
