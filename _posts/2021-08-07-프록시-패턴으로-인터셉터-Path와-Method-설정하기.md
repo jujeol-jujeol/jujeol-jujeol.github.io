@@ -63,7 +63,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
 <img src="https://jujeol-jujeol.github.io/assets/img/interceptor/loginInterceptor.png" height="90%" width="70%">
 
-그림을 보면 로그인 인터셉터를 `PathMatcher Interceptor`가 감싸고 있어요. `PathMatcher Interceptor`는 로그인 인터셉터에 가는 요청의 흐름을 제어하게 되죠. 즉, `PathMatcher` 인터셉터가 로그인 인터셉터가 어떤 api + http method 에 적용이 될지 정해주는 프록시가 되는 것이에요!
+그림을 보면 로그인 인터셉터를 `PathMatcher Interceptor`가 감싸고 있어요. `PathMatcher Interceptor`는 로그인 인터셉터에 가는 요청의 흐름을 제어하게 되죠. 즉, `PathMatcher` 인터셉터가 로그인 인터셉터가 어떤 api + http method 에 적용이 될지 정해주는 프록시가 되는 거죠!
 
 그럼 천천히 `PathMatcher Interceptor` 를 만들어볼게요!
 
