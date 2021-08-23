@@ -106,6 +106,6 @@ solong:
   picture: https://avatars.githubusercontent.com/u/52682603?v=4
   github: soulgchoi
   accent_color: '#0000ff'
-    accent_image:
-      background: '#DDD8FF'
-      overlay: false
+  accent_image:
+    background: '#DDD8FF'
+    overlay: false
