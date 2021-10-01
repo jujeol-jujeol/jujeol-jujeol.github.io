@@ -109,3 +109,17 @@ solong:
   accent_image:
     background: '#DDD8FF'
     overlay: false
+
+pika:
+  name: 피카
+  email: yjwdbawldn83@gmail.com
+  about: |
+    천천히 그리고 꾸준히
+  picture: /assets/img/profile/pika.png
+  github: pika96
+  accent_color: '#0000ff'
+  accent_image:
+    background: '#DDD8FF'
+    overlay: false
+
+    
