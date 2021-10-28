@@ -122,4 +122,14 @@ pika:
     background: '#DDD8FF'
     overlay: false
 
-    
+croffle:
+  name: 크로플
+  email: perenoke@gmail.com
+  about: |
+    세상에서 제일 맛있는 빵
+  picture: /assets/img/profile/croffle.png
+  github: perenok
+  accent_color: '#0000ff'
+  accent_image:
+    background: '#DDD8FF'
+    overlay: false
