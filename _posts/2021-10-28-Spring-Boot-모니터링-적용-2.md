@@ -193,10 +193,23 @@ name-password 쌍으로 넣어야 `Invalid User Name or Password` 이런 에러�
 
 아마 Loki 관련한 권한 자체를 제한하면 name-password 를 필수로 설정할 수 있지 않을까 싶다.
 
-다른 서버에 실행한 Loki 로 보내는 방법에 관하여.. 어쨌든 Loki 도 서버가 실행되기 때문에, 그 위치로 요청을 보내면 된다.
+
+다른 서버에 실행한 Loki 로 보내는 방법은.. 어쨌든 Loki 도 서버가 실행되기 때문에, 그 위치로 요청을 보내면 된다.
 
 ```yaml
-...clients:  # url 을 변경한다.  - url: http://{요청 보낼 Loki 서버 url}:{요청 보낼 Loki port}/loki/api/v1/pushscrape_configs:- job_name: mylog  static_configs:  - targets:      - {요청 보낼 Loki 서버 url}    labels:      job: mylog      __path__: {경로}/mylog.log
+...
+
+clients:  # url 을 변경한다.  
+  - url: http://{요청 보낼 Loki 서버 url}:{요청 보낼 Loki port}/loki/api/v1/push
+  
+scrape_configs:
+  - job_name: mylog
+  static_configs:
+  - targets:
+    - {요청 보낼 Loki 서버 url}
+  labels:
+    job: mylog
+    __path__: {경로}/mylog.log
 ```
 
 내가 원하는 특정한 위치를 `url` 로 입력하고, `targets` 부분도 변경했다.
@@ -204,19 +217,33 @@ name-password 쌍으로 넣어야 `Invalid User Name or Password` 이런 에러�
 Loki 포트의 경우는, `loki-local-config.yaml` 파일을 열어서
 
 ```yaml
-auth_enabled: falseserver:  http_listen_port: {원하는 포트, 기본 3100}  grpc_listen_port: 9096...
+auth_enabled: false
+
+server:
+  http_listen_port: {원하는 포트, 기본 3100}
+  grpc_listen_port: 9096
+
+...
 ```
 
 `http_listen_port` 를 원하는 포트로 바꿔준다. 초기값은 3100 이다.
 
+각각의 설정을 마친 뒤에는 돌고 있던 Loki 와 Promtail 을 종료하고 다시 실행한다.
+```bash
+# Loki
+./loki-linux-amd64 -config.file=loki-local-config.yaml
+# Promtail
+./promtail-linux-amd64 -config.file=promtail-local-config.yaml
+```
 
 ### 이 밖의 이런저런 에러들
 
 - `connect: connection refused` : Loki 가 아직 실행 전일 때 발생한다.
-
+- 
   `http://{loki url}:{port}/ready` 로 요청을 보냈을 때, `ready` 라고 응답이 와야 한다.
 
 로그 삽입 중 뭔가 발생하면 `Promtail msg="final error sending batch"` 이런 식의 에러를 자주 맞닥뜨리는데...
 
 - promtail 설정의 url 에 틀린 부분이 있을 경우 404 에러가 발생한다.
+
 - `error: context exceeded` 로그 이름을 제대로 입력 안해줘서 생긴 문제였다. (폴더명만 준다거나...)
