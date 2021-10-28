@@ -43,16 +43,16 @@ implementation 'io.micrometer:micrometer-registry-prometheus'
 
 ```yaml
 spring:
-	application:
-		name: {my-app-name}
+  application:
+    name: {my-app-name}
 management:
-	endpoints:
-		web:
-			exposure:
-				include: "prometheus"
-	metrics:
-		tags:
-			application: ${sprring.application.name}
+  endpoints:
+    web:
+      exposure:
+        include: "prometheus"
+  metrics:
+    tags:
+      application: ${sprring.application.name}
 ```
 
 prometheus 에 endpoint 를 노출하겠다는 의미이다. `include` 부분에 beans, health 등등.. 어플리케이션 상태를 체크할 다양한 소스를 추가할 수 있다. 하지만 모든 정보를 노출해서는 안되기 때문에 Spring Security 를 사용하는 등 여러 보안 대책이 필요하다.
@@ -75,6 +75,7 @@ prometheus 에 endpoint 를 노출하겠다는 의미이다. `include` 부분에
 
   Grafana 포트 변경 위치 `/opt/homewbrew/etc/grafana.ini`
 
+ubuntu 환경에서는 아래와 같이 진행한다.
 ```bash
 # Grafana 설치
 wget https://dl.grafana.com/oss/release/grafana-{[버전](https://grafana.com/docs/grafana/latest/installation/debian/)}.linux-amd64.tar.gz
@@ -98,7 +99,7 @@ scrape_configs:
 
 # 여기가 새로 추가한 부분
   - job_name: "springboot"
-		metrics_path: "/actuator/prometheus"
+    metrics_path: "/actuator/prometheus"
     static_configs:
     - targets: ["{스프링 부트 서버}"]
 ```
@@ -228,5 +229,5 @@ Grafana 에서 다른 사람들이 구성한 템플릿을 사용할 수 있다. 
 
 
 ## 참고자료
-
+- 대부분 공식문서를 통해 손쉽게 진행할 수 있다.
 - Prometheus, Grafana 연동 - https://meetup.toast.com/posts/237
