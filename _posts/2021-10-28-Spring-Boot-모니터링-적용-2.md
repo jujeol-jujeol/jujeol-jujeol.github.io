@@ -239,7 +239,7 @@ server:
 ### 이 밖의 이런저런 에러들
 
 - `connect: connection refused` : Loki 가 아직 실행 전일 때 발생한다.
-- 
+
   `http://{loki url}:{port}/ready` 로 요청을 보냈을 때, `ready` 라고 응답이 와야 한다.
 
 로그 삽입 중 뭔가 발생하면 `Promtail msg="final error sending batch"` 이런 식의 에러를 자주 맞닥뜨리는데...
