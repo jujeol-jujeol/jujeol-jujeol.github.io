@@ -2,7 +2,7 @@
 layout: post
 title: '[spring] Dirties Context 제거를 통한 테스트 최적화'
 description: >
-Dirties Context 제거를 통한 테스트 최적화
+   Dirties Context 제거를 통한 테스트 최적화
 tags: [jojal-jojal]
 author: wedge
 ---
