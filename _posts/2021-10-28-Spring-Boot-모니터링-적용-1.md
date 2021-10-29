@@ -138,29 +138,27 @@ Prometheus 의 포트를 변경하려면 실행할 때 옵션을 준다. ([참�
 
 ### 실행 화면
 
-<img src="https://user-images.githubusercontent.com/52682603/139259003-c16892c5-ebd0-43b7-b6dc-fff4673e6141.png" width=85%>
+![img1](https://user-images.githubusercontent.com/52682603/139259003-c16892c5-ebd0-43b7-b6dc-fff4673e6141.png)
 
 현재 돌아가고 있는 상태도 확인할 수 있다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139259141-5246249c-2685-4d67-9a92-0e655bc069a8.png" width=85%>
+![img2](https://user-images.githubusercontent.com/52682603/139259141-5246249c-2685-4d67-9a92-0e655bc069a8.png)
 
-<img src="https://user-images.githubusercontent.com/52682603/139259234-f2b723ad-9323-431a-b129-e788618f9b7c.png" width=85%>
+![img3](https://user-images.githubusercontent.com/52682603/139259234-f2b723ad-9323-431a-b129-e788618f9b7c.png)
 
 중간에 어플리케이션을 종료하면 이렇게 상태가 변한다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139259317-fc747503-9ae4-49c3-b859-c09cba5b6f16.png" width=85%>
+![img4](https://user-images.githubusercontent.com/52682603/139259317-fc747503-9ae4-49c3-b859-c09cba5b6f16.png)
 
 ### 메트릭 확인
 
 원하는 메트릭을 그래프, 테이블 형태로 확인할 수 있다. 아래는 JVM 프로세스의 최근 CPU 사용량을 확인한 모습이다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139259378-b175f34e-9718-40b3-a7f2-175b65344f7f.png" width=85%>
+![img5](https://user-images.githubusercontent.com/52682603/139259378-b175f34e-9718-40b3-a7f2-175b65344f7f.png)
 
 서버에 요청을 몇번 보냈더니 CPU 사용량이 확 뛰었다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139259458-a862086d-84ec-4350-8952-c41579546698.png" width=85%>
-
-</br>
+![img6](https://user-images.githubusercontent.com/52682603/139259458-a862086d-84ec-4350-8952-c41579546698.png)
 
 ## Grafana
 
@@ -170,43 +168,43 @@ Grafana 의 기본 id, pw 는 admin, admin 이다. 접속해서 바로 비밀번
 
 홈 화면에 진입한 뒤 Prometheus 를 데이터소스로 추가한다. URL 은 지금 Prometheus가 떠있는 곳, 현재는 기본값인 `http://localhost:9090` 로 연결했다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139285204-0aadf410-6d1f-4741-a4ad-95903b81d5db.png" width=85%>
+![img7](https://user-images.githubusercontent.com/52682603/139285204-0aadf410-6d1f-4741-a4ad-95903b81d5db.png)
 
-<img src="https://user-images.githubusercontent.com/52682603/139260687-d4e104bd-01d7-4c06-aa1b-9b15c7940be9.png" width=85%>
+![img8](https://user-images.githubusercontent.com/52682603/139260687-d4e104bd-01d7-4c06-aa1b-9b15c7940be9.png)
 
-<img src="https://user-images.githubusercontent.com/52682603/139261068-add98c6b-9a7f-4d03-b60d-d03ee4d61b53.png" width=85%>
+![img9](https://user-images.githubusercontent.com/52682603/139261068-add98c6b-9a7f-4d03-b60d-d03ee4d61b53.png)
 
 이렇게 잘 추가된 것을 확인할 수 있다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139261162-2460429a-919a-48d7-9a52-739e6efd0a07.png" width=85%>
+![img10](https://user-images.githubusercontent.com/52682603/139261162-2460429a-919a-48d7-9a52-739e6efd0a07.png)
 
 연결했으니 대시보드를 만들어야 한다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139261304-61ff0ef9-90a9-4157-a83e-d0338242dd85.png" width=85%>
+![img11](https://user-images.githubusercontent.com/52682603/139261304-61ff0ef9-90a9-4157-a83e-d0338242dd85.png)
 
 일단 빈 패널을 생성해서 시도해보려고 한다.
 
 먼저 사용할 데이터소스를 선택하고,
 
-<img src="https://user-images.githubusercontent.com/52682603/139261388-fe9b9dea-b172-4ca3-94a2-9cd3641a90d5.png" width=85%>
+![img12](https://user-images.githubusercontent.com/52682603/139261388-fe9b9dea-b172-4ca3-94a2-9cd3641a90d5.png)
 
 PromQL(Prometheus Query Language)을 작성해서 어떤 지표를 조회할지 작성해야 하는데, 어느정도 지원한다.
 
 `system_cpu_usage` 메트릭을 확인할 것이고, 어떤 어플리케이션과 잡을 선정할 것인지도 고르면 된다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139261509-262eec64-6c94-4a27-adf7-0f34a91f2c0d.png" width=75%>
+![img13](https://user-images.githubusercontent.com/52682603/139261509-262eec64-6c94-4a27-adf7-0f34a91f2c0d.png)
 
-<img src="https://user-images.githubusercontent.com/52682603/139261523-1e14df12-0a62-4504-ae8c-272f7a8fbce7.png" width=45%>
+![img14](https://user-images.githubusercontent.com/52682603/139261523-1e14df12-0a62-4504-ae8c-272f7a8fbce7.png)
 
-<img src="https://user-images.githubusercontent.com/52682603/139261548-43f71d50-383d-45bf-ad7a-6ba463a5e00f.png" width=55%>
+![img15](https://user-images.githubusercontent.com/52682603/139261548-43f71d50-383d-45bf-ad7a-6ba463a5e00f.png)
 
 그러면 알아서 쿼리를 생성해준다! `Use query` 를 눌러서 추가하면, 시각화된 모습을 확인할 수 있다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139261832-ae9967d3-b2f3-4b58-9f30-a0e243172ab3.png" width=85%>
+![img16](https://user-images.githubusercontent.com/52682603/139261832-ae9967d3-b2f3-4b58-9f30-a0e243172ab3.png)
 
 대시보드에 패널 하나가 추가되었다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139261894-6d4d147d-f86a-4549-bc52-e8035c919610.png" width=85%>
+![img15](https://user-images.githubusercontent.com/52682603/139261894-6d4d147d-f86a-4549-bc52-e8035c919610.png)
 
 ### Template을 적용한 대시보드
 
@@ -217,13 +215,13 @@ Grafana 에서 다른 사람들이 구성한 템플릿을 사용할 수 있다. 
 
 대신 구성하면서 변수가 제대로 할당이 되지 않는 문제가 있었다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139261984-1f3876d3-0b8e-4bcd-843f-d92690d603f1.png" width=85%>
+![img16](https://user-images.githubusercontent.com/52682603/139261984-1f3876d3-0b8e-4bcd-843f-d92690d603f1.png)
 
 `jvm_classes_loaded_classes` 부분이 최초에는 `jvm_classes_loaded` 로 되어있어 제대로 된 metric이 아니었던 것이다. 로컬에서 직접 `/actuator/prometheus` 에 어떤 값이 오는지 확인하고 바꿔서 넣어줬다.
 
 이 밖에도 템플릿과 일치하지 않는 부분은 직접 수정하여 대시보드 구성을 완료했다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139262003-a9d0e00d-bd52-4343-840a-9ee8c956d23c.png" width=85%>
+![img17](https://user-images.githubusercontent.com/52682603/139262003-a9d0e00d-bd52-4343-840a-9ee8c956d23c.png)
 
 종종 수정 버튼이 없는 패널이 있는데, `More` > `Panel JSON` 에서 쿼리를 수정하면 된다.
 

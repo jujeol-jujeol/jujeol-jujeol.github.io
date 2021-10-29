@@ -18,7 +18,7 @@ author: solong
 
 `/actuator/logfile` 로 받아오게 만들고 싶었는데, 이러려면 `application.yml` 설정을 손보면 된다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139262350-c101549e-894c-480a-b2d9-3d8e5b124464.png" width=50%>
+![img1](https://user-images.githubusercontent.com/52682603/139262350-c101549e-894c-480a-b2d9-3d8e5b124464.png)
 
 이렇게 작성하면 `서버/actuator/logfile` 에서 로그를 확인할 수 있다.
 
@@ -101,17 +101,17 @@ wget https://raw.githubusercontent.com/grafana/loki/v2.3.0/cmd/loki/loki-local-c
 
 Loki 와 Promtail 을 각각 실행한 뒤, Grafana 에 `Data Source` 로 Loki 를 추가해줘야 한다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139262793-bb728a4f-6dbd-4bc7-b566-11868f27f5b5.png" width=85%>
+![img2](https://user-images.githubusercontent.com/52682603/139262793-bb728a4f-6dbd-4bc7-b566-11868f27f5b5.png)
 
-<img src="https://user-images.githubusercontent.com/52682603/139262808-bc3d2c67-3ede-4642-bb26-94159a7b7b87.png" width=85%>
+![img3](https://user-images.githubusercontent.com/52682603/139262808-bc3d2c67-3ede-4642-bb26-94159a7b7b87.png)
 
 Prometheus 추가했듯이 쉽게 할 수 있다. 대신 저 포트를 이후 바꾸게 되는데...
 
 Grafana 에 패널을 추가한다.
 
-<img src="https://user-images.githubusercontent.com/52682603/139265526-8d6a84ac-3577-4555-914b-fd55cfdf6e24.png" width=85%>
+![img4](https://user-images.githubusercontent.com/52682603/139265526-8d6a84ac-3577-4555-914b-fd55cfdf6e24.png)
 
-<img src="https://user-images.githubusercontent.com/52682603/139265539-169e14df-8adb-4ab8-ae19-5807db26e361.png" width=85%>
+![img5](https://user-images.githubusercontent.com/52682603/139265539-169e14df-8adb-4ab8-ae19-5807db26e361.png)
 
 Data Source 를 Loki 로 잘 선택하고, Promtail 설정에 따라 `filename` 또는 `jobs` 로 쿼리를 생성한다.
 
