@@ -7,11 +7,13 @@ tags: [jojal-jojal]
 author: wedge
 ---
 
-# 문제상황
+# Dirties Context 제거를 통한 테스트 최적화
+
+## 문제상황
 
 인수테스트가 많아지며 테스트 시간이 증가하기 시작했습니다. 주절주절이 구축한 CI/CD는 PR을 보내면 테스트 코드 실행이 포함된 빌드 테스트를 거칩니다. 또한 빌드시에도 다시 한번 운영환경에서 테스트를 거치고 배포를 수행하게 되는데, 2분 이상이 되자 CI/CD 전 과정에 걸쳐서 10분 이상의 시간을 소요하게 되었습니다. 이는 서버 인프라 테스트나 다양한 기능이 비슷한 타이밍에 주절주절 베이스 코드에  합쳐지게 되었을 때 생산성을 저하하는 것으로 이어졌기 때문에, 팀 회의를 거쳐 테스트 최적화를 진행하기로 결정하였습니다.
 
-# 사전정보
+## 사전정보
 
 SpringBoot는 SpringBoot가 run 될 때마다 새롭게 어플리케이션 컨텍스트를 막기 위해 context caching 기능을 지원합니다.
 
@@ -86,16 +88,16 @@ MockMVC는 슬라이스 테스트 도구입니다. 스프링 서버를 별도로
 
 실제로 어떤 내용을 진행하였는지 아래에 서술하겠습니다.
 
-# 개선 목표
+## 개선 목표
 
 1. DirtiesContext를 제거하여 test시간을 n초*수정 요망*으로 줄인다.
 
-# 방법 논의
+## 방법 논의
 
 1. RestAssuered를 MockMVC로 변환한다.
    1. 기존에 활용하던 RequestBuilder를 인터페이스화 하여 MockMVC 구현체를 활용할 수 있도록 수정한다.
 
-# 진행
+## 진행
 
 1. 기존에는 RequestBuilder 라고 하는 인수테스트 툴을 만들어 사용하고 있었습니다.  [링크](https://github.com/woowacourse-teams/2021-jujeol-jujeol/blob/fa9f4ed9553f30fe5167f54ead01cb2907b75338/backend/src/test/java/com/jujeol/RequestBuilder.java)
 
@@ -180,11 +182,11 @@ MockMVC는 슬라이스 테스트 도구입니다. 스프링 서버를 별도로
    <img width="1409" alt="스크린샷 2021-10-29 오전 11 49 06" src="https://user-images.githubusercontent.com/51393021/139366598-036d711d-4061-45c4-8f43-4ca366e4f377.png">
    <img width="1411" alt="스크린샷 2021-10-29 오전 11 49 35" src="https://user-images.githubusercontent.com/51393021/139366603-cafcf588-624f-4373-bf64-8a7c5726f112.png">
 
-# 결론
+## 결론
 
 PR을 보내고 빌드 테스트를 하는 동안 '세상에서 가장 오래 기다려야하는 5분'이라는 느낌으로 대기 했는데, 2분 내외로 줄어드니 살 맛납니다. 각종 최적화 기법을 적용해 테스트 시간을 줄여보는 것이 어떨지요!
 
-# 참고
+## 참고
 
 - [https://www.youtube.com/watch?v=jdlBu2vFv58&t=463s](https://www.youtube.com/watch?v=jdlBu2vFv58&t=463s)
 - [https://bperhaps.tistory.com/entry/테스트-코드-최적화-여행기-1](https://bperhaps.tistory.com/entry/%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C-%EC%B5%9C%EC%A0%81%ED%99%94-%EC%97%AC%ED%96%89%EA%B8%B0-1)
